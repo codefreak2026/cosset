@@ -87,11 +87,11 @@ export default function ContactSection() {
   }, [toast]);
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-stone-50 dark:bg-slate-950 relative">
+    <section id="contact" className="py-16 md:py-24 bg-stone-50 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <p className="section-tag text-center mb-3">Get in Touch</p>
         <h2 className="section-title text-center mb-4">Let&apos;s Talk</h2>
-        <p className="text-stone-600 dark:text-slate-300 text-center max-w-xl mx-auto mb-12">
+        <p className="text-stone-600 text-center max-w-xl mx-auto mb-12">
           Collaboration, work enquiries or just say hello.
         </p>
 

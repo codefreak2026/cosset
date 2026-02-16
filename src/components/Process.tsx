@@ -15,11 +15,11 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="py-16 md:py-24 bg-white dark:bg-slate-950">
+    <section id="process" className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <p className="section-tag mb-3">How We Work</p>
         <h2 className="section-title mb-4">Our Process</h2>
-        <p className="text-stone-600 dark:text-slate-300 max-w-2xl mb-12">
+        <p className="text-stone-600 max-w-2xl mb-12">
           From concept to completion, we follow a clear process to deliver your dream space.
         </p>
 
@@ -31,8 +31,8 @@ export default function Process() {
                   {i + 1}
                 </span>
                 <div>
-                  <h3 className="text-xl font-semibold text-stone-800 dark:text-slate-100 mb-2">{step.title}</h3>
-                  <p className="text-stone-600 dark:text-slate-300 leading-relaxed">{step.description}</p>
+                  <h3 className="text-xl font-semibold text-stone-800 mb-2">{step.title}</h3>
+                  <p className="text-stone-600 leading-relaxed">{step.description}</p>
                 </div>
               </div>
             </div>

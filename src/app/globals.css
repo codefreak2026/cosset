@@ -9,14 +9,7 @@
   --border: #e7e5e4;
 }
 
-:root.dark {
-  --background: #020617;
-  --foreground: #e5e7eb;
-  --accent: #fbbf24;
-  --accent-light: #facc15;
-  --muted: #9ca3af;
-  --border: #1f2937;
-}
+/* Dark theme removed — site will remain on an elegant/stylish white theme */
 
 @theme inline {
   --color-background: var(--background);
@@ -30,6 +23,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* force light color-scheme for consistency */
+  color-scheme: light;
 }
 
 body {

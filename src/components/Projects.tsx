@@ -12,11 +12,11 @@ const dummyProjects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-16 md:py-24 bg-white dark:bg-slate-950">
+    <section id="projects" className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <p className="section-tag mb-3">Portfolio</p>
         <h2 className="section-title mb-4">Our Projects</h2>
-        <p className="text-stone-600 dark:text-slate-300 max-w-2xl mb-12">
+        <p className="text-stone-600 max-w-2xl mb-12">
           A selection of our completed work across residential, commercial, and interior design.
         </p>
 

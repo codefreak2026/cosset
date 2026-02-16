@@ -20,11 +20,11 @@ const galleryImages = [
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="py-16 md:py-24 bg-stone-50 dark:bg-slate-950">
+    <section id="gallery" className="py-16 md:py-24 bg-stone-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <p className="section-tag mb-3">What We Do</p>
         <h2 className="section-title mb-4">Gallery</h2>
-        <p className="text-stone-600 dark:text-slate-300 max-w-2xl mb-12">
+        <p className="text-stone-600 max-w-2xl mb-12">
           A glimpse of the spaces we create—residential, commercial, and interior.
         </p>
 
@@ -33,7 +33,7 @@ export default function Gallery() {
           {galleryImages.map((img, i) => (
             <div
               key={i}
-              className="relative mb-3 overflow-hidden rounded-lg bg-stone-200 dark:bg-slate-800 break-inside-avoid group"
+              className="relative mb-3 overflow-hidden rounded-lg bg-stone-200 break-inside-avoid group"
             >
               <Image
                 src={img.src}
