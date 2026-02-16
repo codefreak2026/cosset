@@ -4,24 +4,17 @@ export default function About() {
   return (
     <section id="about" className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-stone-200">
-            <Image
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800"
-              alt="Studio workspace"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          </div>
+        <div className="grid md:grid-cols-1 gap-12 md:gap-16 items-center">
           <div>
             <p className="section-tag mb-3">About Us</p>
-            <h2 className="section-title mb-6">Welcome to Cosset</h2>
+            <div className="flex flex-row items-baseline gap-2 mb-4">
+              <h2 className="section-title mb-6">Welcome to</h2>
+              <h2 className="text-4xl md:text-5xl font-semibold italic mb-6 text-center text-amber-700/90">Cosset Spaces</h2>  
+            </div>
             <p className="text-stone-600 leading-relaxed mb-4">
-              We believe that architecture is more than bricks and mortar. It&apos;s a testament to creativity,
-              innovation, and the pursuit of timeless beauty. As an established Architecture and Interior
-              Designing practice, we are dedicated to crafting spaces that not only stand as functional
-              marvels but also serve as aesthetic expressions of our clients&apos; dreams and aspirations.
+              Founded on the belief that a home or workspace should be a sanctuary from the chaotic, our studio blends technical rigor with a tactile, human-centric approach.
+              We pamper, we protect, we inspire. 
+We curate every shadow, material, and sightline to ensure your space feels uniquely yours. At Cosset Spaces, we aren't just designing for the eyes—we are designing for the soul
             </p>
             <p className="text-stone-600 leading-relaxed mb-6">
               We create highly adjustable and tailored spaces that promote physical health, emotional

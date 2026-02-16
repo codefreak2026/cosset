@@ -5,15 +5,15 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About Us" },
-  { href: "#gallery", label: "Gallery" },
-  { href: "#process", label: "Process" },
+  { href: "/#home", label: "Home" },
+  { href: "/#about", label: "About Us" },
+  { href: "/#gallery", label: "Gallery" },
+  { href: "/#process", label: "Process" },
   // { href: "#projects", label: "Projects" },
-  { href: "#packages", label: "Packages" },
+  { href: "/#packages", label: "Packages" },
   // { href: "#testimonials", label: "Testimonials" },
   // { href: "#blog", label: "Blog" },
-  { href: "#contact", label: "Contact Us" },
+  { href: "/#contact", label: "Contact Us" },
 ];
 
 const VISIT_KEY = "cosset_visit_recorded";
@@ -57,14 +57,14 @@ export default function Navbar() {
               priority
             />
           </div> */}
-          <span className="text-xl md:text-2xl font-semibold text-stone-800">
+          <span className="text-3xl md:text-5xl font-semibold italic text-stone-800">
             Cosset
           </span>
-          {visitCount !== null && (
+          {/* {visitCount !== null && (
             <span className="hidden sm:inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium text-amber-800">
               {visitCount.toLocaleString()} visits
             </span>
-          )}
+          )} */}
         </Link>
 
         <ul className="hidden md:flex items-center gap-6">
@@ -108,12 +108,11 @@ export default function Navbar() {
       {open && (
         <div className="md:hidden border-t border-stone-200 bg-white px-4 py-4">
           <div className="flex items-center justify-between mb-3">
-            {visitCount !== null && (
+            {/* {visitCount !== null && (
               <p className="text-sm text-stone-500">
                 {visitCount.toLocaleString()} visits
               </p>
-            )}
-            {/* Theme toggle removed — site uses a single elegant white theme */}
+            )} */}
           </div>
           <ul className="flex flex-col gap-3">
             {navLinks.map((link) => (

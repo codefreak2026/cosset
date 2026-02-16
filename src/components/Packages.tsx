@@ -1,23 +1,21 @@
 const packages = [
   {
     name: "Silver Package",
-    rate: "₹6/Sqft",
+    rate: "₹10/Sqft",
     features: [
       "Floor Plan",
       "Plumbing Design",
       "Electric Design",
+      "HVAC design",
       "3D Front Elevation",
     ],
     highlighted: false,
   },
   {
-    name: "Gold Package",
-    rate: "₹8/Sqft",
+    name: "Platinum Package",
+    rate: "₹30/Sqft",
     features: [
-      "Floor Plan",
-      "Plumbing Design",
-      "Electric Design",
-      "3D Front Elevation",
+      "Everything in Silver Package",
       "Column Layout Design",
       "Pile/Footing Layout Design",
       "Tie Beam Detail Design",
@@ -26,14 +24,24 @@ const packages = [
       "Staircase Section Details",
       "Septic Tank & Borewell Position",
     ],
+    highlighted: false,
+  },
+  {
+    name: "Gold Package",
+    rate: "₹45/Sqft",
+    features: [
+      "Everything in Platinum Package",
+      "3D Interior Design",
+      "Site visits"
+    ],
     highlighted: true,
   },
   {
     name: "Diamond Package",
-    rate: "₹25/Sqft",
+    rate: "₹60/Sqft",
     features: [
       "Everything in Gold Package",
-      "3D Interior Design",
+      "Exterior Landscaping",
     ],
     highlighted: false,
   },
@@ -45,11 +53,14 @@ export default function Packages() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <p className="section-tag mb-3">Services</p>
         <h2 className="section-title mb-4">Our Packages</h2>
-        <p className="text-stone-600 max-w-2xl mb-12">
+        <p className="text-stone-600 max-w-2xl mb-2">
           Choose a package that fits your project. From basic floor plans to full structural and interior design.
         </p>
+        <p className="text-stone-600 max-w-2xl mb-12">
+           (* Material, buffer, labour and logistics costing not inclusive)
+        </p>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {packages.map((pkg, i) => (
             <div
               key={i}

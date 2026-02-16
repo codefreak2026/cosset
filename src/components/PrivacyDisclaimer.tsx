@@ -1,33 +1,26 @@
+import Link from "next/link";
 export default function PrivacyDisclaimer() {
   return (
     <section id="legal" className="py-16 md:py-20 bg-white border-t border-stone-200">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <p className="section-tag mb-3">Legal</p>
-        <h2 className="section-title mb-8">Privacy & Disclaimer</h2>
+        <Link className="section-title  hover:underline hover:opacity-75" href={"/privacy-policies"} target="_blank" rel="noopener noreferrer">Privacy & Disclaimer</Link>
 
-        <div className="space-y-8 text-stone-600 leading-relaxed">
+        <div className="space-y-8 mt-8 text-stone-600 leading-relaxed">
           <div>
-            <h3 className="font-semibold text-stone-800 mb-2">Privacy Policy</h3>
+            <h3 className="font-semibold text-stone-800 mb-2">"Your Privacy, Carefully Curated"</h3>
             <p>
-              We respect your privacy. Any information you provide through our contact form or other channels
-              will be used only to respond to your enquiries and improve our services. We do not sell or
-              share your personal data with third parties. By using this website and submitting the contact
-              form, you agree to our privacy practices as described here.
+              At Cosset Spaces, we value the trust you place in us as much as the spaces we design. When you share your information—whether through a consultation request or a project brief—we treat it with the same discretion and care as a private sanctuary. We collect only what is necessary to enhance your experience, such as contact details and project aspirations, to provide a more personalized and 'cosseted' service. Your data is never sold or traded; it is used exclusively to facilitate our architectural services, process your requests, and keep you informed of our latest innovations. We implement industry-standard security measures to safeguard your personal details from unauthorized access, ensuring your digital peace of mind is never compromised. 
             </p>
           </div>
 
           <div>
-            <h3 className="font-semibold text-stone-800 mb-2">Disclaimer</h3>
             <p>
-              The content on this website is for general information only. While we strive to keep information
-              accurate and up to date, we make no representations or warranties of any kind about the
-              completeness or suitability of the content. Reliance on any information on this site is at your
-              own risk. All designs, images, and project details are indicative and may vary as per site
-              conditions and client requirements. For project-specific advice, please contact us directly.
+              The content provided on the Cosset Spaces website—including project imagery, 3D renderings, and design descriptions—is for illustrative and informational purposes only. While we strive for absolute accuracy, these materials represent an artistic impression and do not constitute a final warranty, guarantee, or a formal contract of any kind. Actual project deliverables may vary based on site conditions, regulatory approvals, and evolving design refinements. By using this site, you acknowledge that Cosset Spaces is not liable for any decisions made based solely on this general information. Professional architectural advice should always be sought through a formal, signed agreement with our studio before commencing any structural work. We reserve the right to update our portfolio and policies at any time without prior notice.
             </p>
           </div>
 
-          <div>
+          {/* <div>
             <h3 className="font-semibold text-stone-800 mb-2">Terms & Conditions</h3>
             <p>
               Use of this website implies acceptance of these terms. All intellectual property in the designs,
@@ -35,7 +28,7 @@ export default function PrivacyDisclaimer() {
               We reserve the right to update these policies at any time; continued use after changes
               constitutes acceptance.
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
