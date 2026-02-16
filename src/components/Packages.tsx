@@ -41,11 +41,11 @@ const packages = [
 
 export default function Packages() {
   return (
-    <section id="packages" className="py-16 md:py-24 bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+    <section id="packages" className="py-16 md:py-24 bg-white dark:bg-slate-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <p className="section-tag mb-3">Services</p>
         <h2 className="section-title mb-4">Our Packages</h2>
-        <p className="text-stone-600 max-w-2xl mb-12">
+        <p className="text-stone-600 dark:text-slate-300 max-w-2xl mb-12">
           Choose a package that fits your project. From basic floor plans to full structural and interior design.
         </p>
 

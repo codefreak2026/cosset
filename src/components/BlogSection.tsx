@@ -38,11 +38,11 @@ const blogPosts = [
 
 export default function BlogSection() {
   return (
-    <section id="blog" className="py-16 md:py-24 bg-stone-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+    <section id="blog" className="py-16 md:py-24 bg-stone-50 dark:bg-slate-950">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <p className="section-tag mb-3">Blog</p>
         <h2 className="section-title mb-4">Latest from Our Blog</h2>
-        <p className="text-stone-600 max-w-2xl mb-12">
+        <p className="text-stone-600 dark:text-slate-300 max-w-2xl mb-12">
           Insights on architecture, interior design, and sustainable building.
         </p>
 

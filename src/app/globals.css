@@ -2,11 +2,20 @@
 
 :root {
   --background: #fafaf9;
-  --foreground: #1c1917;
+  --foreground: #1f2933;
   --accent: #b45309;
   --accent-light: #d97706;
   --muted: #78716c;
   --border: #e7e5e4;
+}
+
+:root.dark {
+  --background: #020617;
+  --foreground: #e5e7eb;
+  --accent: #fbbf24;
+  --accent-light: #facc15;
+  --muted: #9ca3af;
+  --border: #1f2937;
 }
 
 @theme inline {
@@ -29,7 +38,7 @@ body {
   font-family: var(--font-sans);
 }
 
-/* Section headings style similar to Design Plus Studio */
+/* Section headings */
 .section-tag {
   @apply text-amber-700/90 text-sm font-semibold uppercase tracking-widest;
 }
@@ -41,3 +50,4 @@ body {
 .card-hover {
   @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
 }
+

@@ -49,7 +49,10 @@ export default function LandingCarousel() {
   }, []);
 
   return (
-    <section id="home" className="relative h-[85vh] min-h-[500px] overflow-hidden">
+    <section
+      id="home"
+      className="relative h-[85vh] min-h-[520px] overflow-hidden mt-16 md:mt-20 rounded-b-3xl shadow-[0_18px_45px_rgba(15,23,42,0.35)]"
+    >
       {slides.map((slide, i) => (
         <div
           key={i}
@@ -61,31 +64,39 @@ export default function LandingCarousel() {
             src={slide.image}
             alt=""
             fill
-            className="object-cover"
+            className={`object-cover transition-transform duration-[4000ms] ease-out ${
+              i === index ? "scale-105" : "scale-100"
+            }`}
             sizes="100vw"
             priority={i === 0}
           />
-          <div className="absolute inset-0 bg-stone-900/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70" />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-            <p className="text-amber-400/95 text-sm font-semibold uppercase tracking-widest mb-3">
-              {slide.subtitle}
-            </p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white tracking-tight max-w-4xl">
-              {slide.title}
-            </h1>
-            <div className="flex gap-4 mt-10">
-              <a
-                href="#projects"
-                className="inline-flex items-center px-6 py-3 bg-amber-500 text-white font-medium rounded-md hover:bg-amber-600 transition-colors"
-              >
-                Our Projects
-              </a>
-              <a
-                href="#contact"
-                className="inline-flex items-center px-6 py-3 border-2 border-white text-white font-medium rounded-md hover:bg-white hover:text-stone-900 transition-colors"
-              >
-                Get in Touch
-              </a>
+            <div className="max-w-5xl mx-auto">
+              <p className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-amber-200 text-xs font-semibold uppercase tracking-[0.25em] mb-4">
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-amber-300" />
+                {slide.subtitle}
+              </p>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white tracking-tight max-w-4xl mx-auto drop-shadow-[0_10px_40px_rgba(0,0,0,0.7)]">
+                {slide.title}
+              </h1>
+              <p className="mt-5 text-base sm:text-lg text-slate-100/80 max-w-xl mx-auto">
+                Bespoke architecture and interiors crafted to cocoon you in comfort.
+              </p>
+              <div className="flex flex-wrap gap-4 justify-center mt-10">
+                <a
+                  href="#gallery"
+                  className="inline-flex items-center px-6 py-3 rounded-full bg-amber-500 text-white font-medium shadow-lg shadow-amber-500/40 hover:bg-amber-400 transition-colors"
+                >
+                  View Gallery
+                </a>
+                <a
+                  href="#contact"
+                  className="inline-flex items-center px-6 py-3 rounded-full border border-white/70 text-white font-medium hover:bg-white hover:text-stone-900 transition-colors"
+                >
+                  Get in Touch
+                </a>
+              </div>
             </div>
           </div>
         </div>
