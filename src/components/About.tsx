@@ -8,15 +8,14 @@ export default function About() {
           <div>
             <p className="section-tag mb-3">About Us</p>
               <h2 className="section-title mb-6">Welcome to <span className="text-4xl md:text-5xl font-semibold italic mb-6  text-red-700/90">Cosset Spaces</span> </h2>
-            <p className="text-stone-600 leading-relaxed mb-4">
-              Founded on the belief that a home or workspace should be a sanctuary from the chaotic, our studio blends technical rigor with a tactile, human-centric approach.
-              We pamper, we protect, we inspire. 
-We curate every shadow, material, and sightline to ensure your space feels uniquely yours. At Cosset Spaces, we aren't just designing for the eyes—we are designing for the soul
+              <span className="italic">-By Ar. Diya Sinha</span>
+            <p className="text-stone-600 leading-relaxed my-4">
+              "Founded on the belief that a home or workspace should be a sanctuary from the chaotic, our studio blends technical rigor with a tactile, human-centric approach.
+              
             </p>
             <p className="text-stone-600 leading-relaxed mb-6">
-              We create highly adjustable and tailored spaces that promote physical health, emotional
-              well-being, and mental clarity. Our design speaks to you—fusing modern sensibilities with
-              indigenous materials, art, and craft.
+              We pamper, we protect, we inspire. 
+We curate every shadow, material, and sightline to ensure your space feels uniquely yours. At Cosset Spaces, we aren't just designing for the eyes—we are designing for the soul."
             </p>
             <a
               href="#contact"
