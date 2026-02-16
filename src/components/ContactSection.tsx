@@ -175,16 +175,29 @@ export default function ContactSection() {
       {toast && (
         <div className="pointer-events-none fixed inset-x-0 bottom-4 flex justify-center z-40">
           <div
-            className={`pointer-events-auto max-w-md w-full mx-4 px-4 py-3 rounded-lg shadow-xl border text-sm flex items-center gap-3 ${
+            className={`pointer-events-auto max-w-md w-full mx-4 px-5 py-3 rounded-lg shadow-2xl border text-sm flex items-center gap-3 transform transition-all duration-300 ease-out ${
               toast.type === "success"
-                ? "bg-emerald-50 border-emerald-200 text-emerald-800"
-                : "bg-rose-50 border-rose-200 text-rose-800"
+                ? "bg-emerald-600 border-emerald-700 text-white"
+                : "bg-rose-600 border-rose-700 text-white"
             }`}
+            role="status"
+            aria-live="polite"
           >
-            <span>
-              {toast.type === "success" ? "✓" : "!"}
+            <span className="flex-shrink-0">
+              {toast.type === "success" ? (
+                <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" className="opacity-30" />
+                  <path d="M7 13l3 3 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M12 9v4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M12 17h.01" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              )}
             </span>
-            <p>{toast.message}</p>
+            <p className="flex-1 font-semibold">{toast.message}</p>
           </div>
         </div>
       )}
