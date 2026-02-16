@@ -7,10 +7,7 @@ export default function About() {
         <div className="grid md:grid-cols-1 gap-12 md:gap-16 items-center">
           <div>
             <p className="section-tag mb-3">About Us</p>
-            <div className="flex flex-row items-baseline gap-2 mb-4">
-              <h2 className="section-title mb-6">Welcome to</h2>
-              <h2 className="text-4xl md:text-5xl font-semibold italic mb-6 text-center text-amber-700/90">Cosset Spaces</h2>  
-            </div>
+              <h2 className="section-title mb-6">Welcome to <span className="text-4xl md:text-5xl font-semibold italic mb-6  text-amber-700/90">Cosset Spaces</span> </h2>
             <p className="text-stone-600 leading-relaxed mb-4">
               Founded on the belief that a home or workspace should be a sanctuary from the chaotic, our studio blends technical rigor with a tactile, human-centric approach.
               We pamper, we protect, we inspire. 
