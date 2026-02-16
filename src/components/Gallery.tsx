@@ -1,24 +1,43 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect } from "react";
+import PhotoSwipeLightbox from "photoswipe/lightbox";
+import PhotoSwipe from "photoswipe";
+import "photoswipe/style.css";
 
 const galleryImages = [
-  { src: "https://drive.google.com/uc?export=view&id=1WnjHDeEDGUutlGHW9aC9WMe8iNrWgBdP", alt: "Modern residence" },
-  { src: "https://drive.google.com/uc?export=view&id=17yJ3MRpUyc2q6BE2Ai4lbJtQ0VcXwia_", alt: "Living space" },
-  { src: "https://drive.google.com/uc?export=view&id=1wlMFoFF49ZpKVO0lbGued0HPlIF_sWmE", alt: "Villa exterior" },
-  { src: "https://drive.google.com/uc?export=view&id=1r2vhDBBrxx7V_a197djZMs2t1Um_KrpO", alt: "Interior design" },
-  { src: "https://drive.google.com/uc?export=view&id=17ksiOiuEep4yTX-rWZ9M01dMouN1JbOm", alt: "Kitchen" },
-  { src: "https://drive.google.com/uc?export=view&id=1lTkuZ09LwBvgwJs0wjAnB4dVX0mJ7I3W", alt: "Bedroom" },
-  { src: "https://drive.google.com/uc?export=view&id=1NL0eWaT_5vMvc96zgGbbyLzYbkb7UnI1", alt: "House front" },
-  { src: "https://drive.google.com/uc?export=view&id=1lnxUkDyrLX_qIH5_-jypdYELYFiVC2c2", alt: "Contemporary home" },
-  { src: "https://drive.google.com/uc?export=view&id=1PnpyTWokS35C559v2FLMoocAHlEoX967", alt: "Architecture detail" },
-  { src: "https://drive.google.com/uc?export=view&id=1grD2xqw1STSfcah27TM_PtSRwHCkkbei", alt: "Architecture detail" },
-  { src: "https://drive.google.com/uc?export=view&id=1K6kD8OgWPFDCSEjUHgTjkNa0AyLO70dz", alt: "Architecture detail" },
-  { src: "https://drive.google.com/uc?export=view&id=1ohZWig52bvhUgB_Z6JjNnr62odeuvvbW", alt: "Architecture detail" },
-  { src: "https://drive.google.com/uc?export=view&id=1JO7WE7IungBXDoL8Ux8k7pK1okEP4s8j", alt: "Architecture detail" },
-  { src: "https://drive.google.com/uc?export=view&id=19AVVkPA83uLUeaTI6E0csapjZ-Zhc7sQ", alt: "Architecture detail" },
-  { src: "https://drive.google.com/uc?export=view&id=1_O2Rtt3tEDutZFYIDQ7VhB2pVfq5w8ue", alt: "Architecture detail" },
+  { src: "https://res.cloudinary.com/dmgvtmsba/image/upload/v1771269593/cosset/gallery/1.jpg", alt: "Modern residence", w: 1600, h: 1000 },
+  { src: "https://res.cloudinary.com/dmgvtmsba/image/upload/v1771269593/cosset/gallery/2.jpg", alt: "Living space", w: 1600, h: 1000 },
+  { src: "https://res.cloudinary.com/dmgvtmsba/image/upload/v1771269594/cosset/gallery/3.jpg", alt: "Villa exterior", w: 1600, h: 1000 },
+  { src: "https://res.cloudinary.com/dmgvtmsba/image/upload/v1771269593/cosset/gallery/4.jpg", alt: "Interior design", w: 1600, h: 1000 },
+  { src: "https://res.cloudinary.com/dmgvtmsba/image/upload/v1771269594/cosset/gallery/5.jpg", alt: "Kitchen", w: 1600, h: 1000 },
+  { src: "https://res.cloudinary.com/dmgvtmsba/image/upload/v1771269595/cosset/gallery/6.jpg", alt: "Bedroom", w: 1600, h: 1000 },
+  { src: "https://res.cloudinary.com/dmgvtmsba/image/upload/v1771269593/cosset/gallery/7.jpg", alt: "House front", w: 1600, h: 1000 },
+  { src: "https://res.cloudinary.com/dmgvtmsba/image/upload/v1771269595/cosset/gallery/8.jpg", alt: "Contemporary home", w: 1600, h: 1000 },
+  { src: "https://res.cloudinary.com/dmgvtmsba/image/upload/v1771269595/cosset/gallery/9.jpg", alt: "Architecture detail", w: 1600, h: 1000 },
+  { src: "https://res.cloudinary.com/dmgvtmsba/image/upload/v1771269596/cosset/gallery/10.jpg", alt: "Architecture detail", w: 1600, h: 1000 },
+  { src: "https://res.cloudinary.com/dmgvtmsba/image/upload/v1771269598/cosset/gallery/11.jpg", alt: "Architecture detail", w: 1600, h: 1000 },
+  { src: "https://res.cloudinary.com/dmgvtmsba/image/upload/v1771269594/cosset/gallery/12.jpg", alt: "Architecture detail", w: 1600, h: 1000 },
+  { src: "https://res.cloudinary.com/dmgvtmsba/image/upload/v1771269595/cosset/gallery/13.jpg", alt: "Architecture detail", w: 1600, h: 1000 },
+  { src: "https://res.cloudinary.com/dmgvtmsba/image/upload/v1771269594/cosset/gallery/14.jpg", alt: "Architecture detail", w: 1600, h: 1000 },
+  { src: "https://res.cloudinary.com/dmgvtmsba/image/upload/v1771269593/cosset/gallery/15.jpg", alt: "Architecture detail", w: 1600, h: 1000 },
 ];
 
 export default function Gallery() {
+  useEffect(() => {
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: "#pswp-gallery",
+      children: "a",
+      pswpModule: PhotoSwipe,
+      showHideAnimationType: "zoom",
+      bgOpacity: 0.85,
+    });
+
+    lightbox.init();
+    return () => lightbox.destroy();
+  }, []);
+
   return (
     <section id="gallery" className="py-16 md:py-24 bg-stone-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -28,25 +47,22 @@ export default function Gallery() {
           A glimpse of the spaces we create—residential, commercial, and interior.
         </p>
 
-        {/* Masonry-style layout like Pinterest */}
-        <div className="columns-2 md:columns-3 gap-3 md:gap-4 [column-fill:_balance]">
+        <div id="pswp-gallery" className="columns-2 md:columns-3 gap-3 md:gap-4 [column-fill:balance]">
           {galleryImages.map((img, i) => (
-            <div
-              key={i}
-              className="relative mb-3 overflow-hidden rounded-lg bg-stone-200 break-inside-avoid group"
-            >
-              <Image
-                src={img.src}
-                alt={img.alt}
-                width={800}
-                height={600}
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </div>
+            <figure key={i} className="relative mb-3 overflow-hidden rounded-lg bg-stone-200 break-inside-avoid group m-0">
+              <a href={img.src} data-pswp-width={img.w} data-pswp-height={img.h}>
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  width={800}
+                  height={600}
+                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </a>
+            </figure>
           ))}
         </div>
       </div>
     </section>
   );
 }
-

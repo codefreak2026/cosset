@@ -8,7 +8,7 @@ export default function About() {
           <div>
             <p className="section-tag mb-3">About Us</p>
               <h2 className="section-title mb-6">Welcome to <span className="text-4xl md:text-5xl font-semibold italic mb-6  text-red-700/90">Cosset Spaces</span> </h2>
-              <span className="italic">-By Ar. Diya Sinha</span>
+              <span>by Ar. Diya Sinha</span>
             <p className="text-stone-600 leading-relaxed my-4">
               "Founded on the belief that a home or workspace should be a sanctuary from the chaotic, our studio blends technical rigor with a tactile, human-centric approach.
               

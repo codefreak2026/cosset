@@ -4,7 +4,7 @@ export default function PrivacyDisclaimer() {
     <section id="legal" className="py-16 md:py-20 bg-white border-t border-stone-200">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <p className="section-tag mb-3">Legal</p>
-        <Link className="underline hover:opacity-75 font-serif text-3xl  italic" href={"/privacy-policies"} target="_blank" rel="noopener noreferrer">Privacy & Disclaimer<span className="text-xl font-normal ">&nbsp;&nbsp;(Click here to read)</span></Link>
+        <Link className="underline hover:opacity-75 font-serif text-2xl" href={"/privacy-policies"} target="_blank" rel="noopener noreferrer">Privacy & Disclaimer<span className="text-xl font-normal ">&nbsp;&nbsp;(Click here to read)</span></Link>
 
         <div className="space-y-8 mt-8 text-stone-600 leading-relaxed">
           <div>
