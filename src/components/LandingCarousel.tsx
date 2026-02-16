@@ -5,24 +5,34 @@ import { useState, useEffect } from "react";
 
 const slides = [
   {
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920",
+    image: "https://drive.google.com/uc?export=view&id=1xnI1lb0MGshKsGdi3pkfANEJHwEc9Kn_",
     title: "Where Vision Meets Design",
     subtitle: "Architecture & Interior Design",
   },
   {
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920",
+    image: "https://drive.google.com/uc?export=view&id=1gk_ViNwLsEOuHCncZQ6Ma35w7hhJtSZe",
     title: "Spaces That Speak",
     subtitle: "Crafting functional marvels and aesthetic expressions",
   },
   {
-    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1920",
+    image: "https://drive.google.com/uc?export=view&id=1MHOVxI14f7aqQVItr2mxuSXhFMae-P0v",
     title: "Timeless Beauty",
     subtitle: "Innovation rooted in tradition",
   },
   {
-    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1920",
+    image: "https://drive.google.com/uc?export=view&id=1SGOXBXS1hqWJDWW_0E5QRAVHIBjejUCG",
     title: "Your Dream Space",
     subtitle: "From concept to completion",
+  },
+  {
+    image: "https://drive.google.com/uc?export=view&id=11gI118ycplza5rpiU7f5Hzp0eyYV_vqV",
+    title: "Luxury Living",
+    subtitle: "Experience the pinnacle of luxury living",
+  },
+  {
+    image: "https://drive.google.com/uc?export=view&id=1nAouMPN1ZqBNMdykkuSVkEF7k4epCKcC",
+    title: "Commercial Complex",
+    subtitle: "Commercial Complex Design",
   },
 ];
 
