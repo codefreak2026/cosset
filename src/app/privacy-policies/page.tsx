@@ -6,9 +6,8 @@ export default function PrivacyPoliciesPage() {
   return (
     <main className="min-h-screen bg-white text-stone-800 py-16 px-6">
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-3xl font-semibold mb-6">Content for the link</h1>
 
-        <section className="space-y-4 mb-6">
+        <section className="space-y-4 my-6">
           <h2 className="text-xl font-semibold">1. Privacy Policy</h2>
           <p><strong>Consent:</strong> By engaging with Cosset Spaces, you consent to our practices regarding your personal data.</p>
           <p><strong>Information We Gather:</strong> We collect only what is essential—your name, contact details, and project visions—to craft your bespoke environment. Technical data (IP addresses) may be gathered to improve your browsing experience.</p>
