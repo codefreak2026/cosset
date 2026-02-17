@@ -72,8 +72,21 @@ export default function Gallery() {
       }),
     });
 
-    // Add click-outside-to-close functionality
+    let isLightboxOpen = false;
+
+    // Handle back button close
+    const handlePopState = () => {
+      if (isLightboxOpen) {
+        lightbox.pswp?.close();
+      }
+    };
+
+    // Add click-outside-to-close functionality and back button support
     lightbox.on("init", () => {
+      isLightboxOpen = true;
+      // Push a state to browser history so back button works
+      window.history.pushState({ lightboxOpen: true }, "");
+
       const element = lightbox.pswp?.element;
       if (element) {
         const bgElement = element.querySelector(".pswp__bg") as HTMLElement;
@@ -83,10 +96,20 @@ export default function Gallery() {
           });
         }
       }
+
+      window.addEventListener("popstate", handlePopState);
+    });
+
+    lightbox.on("close", () => {
+      isLightboxOpen = false;
+      window.removeEventListener("popstate", handlePopState);
     });
 
     lightbox.init();
-    return () => lightbox.destroy();
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+      lightbox.destroy();
+    };
   }, [itemData]);
 
   return (
