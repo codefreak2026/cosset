@@ -73,14 +73,12 @@ export default function Packages() {
               )}
               <h3 className="text-xl font-semibold text-stone-800 mb-2">{pkg.name}</h3>
               <p className="text-base text-stone-700 mb-6 leading-relaxed">
-                For pricing,{" "}
                 <a
                   href="#contact"
                   className="font-medium text-amber-700 underline underline-offset-2 decoration-amber-700/40 hover:text-amber-800 hover:decoration-amber-800"
                 >
-                  contact us
-                </a>{" "}
-                — we&apos;ll share a quote tailored to your project.
+                  Know rate per sqft
+                </a>
               </p>
               <ul className="space-y-2">
                 {pkg.features.map((f, j) => (
