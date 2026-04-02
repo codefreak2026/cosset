@@ -1,7 +1,6 @@
 const packages = [
   {
     name: "Silver Package",
-    rate: "₹10/Sqft",
     features: [
       "Floor Plan",
       "Plumbing Design",
@@ -13,7 +12,6 @@ const packages = [
   },
   {
     name: "Platinum Package",
-    rate: "₹30/Sqft",
     features: [
       "Everything in Silver Package",
       "Column Layout Design",
@@ -28,7 +26,6 @@ const packages = [
   },
   {
     name: "Gold Package",
-    rate: "₹45/Sqft",
     features: [
       "Everything in Platinum Package",
       "3D Interior Design",
@@ -38,7 +35,6 @@ const packages = [
   },
   {
     name: "Diamond Package",
-    rate: "₹60/Sqft",
     features: [
       "Everything in Gold Package",
       "Exterior Landscaping",
@@ -76,7 +72,16 @@ export default function Packages() {
                 </span>
               )}
               <h3 className="text-xl font-semibold text-stone-800 mb-2">{pkg.name}</h3>
-              <p className="text-2xl font-bold text-amber-600 mb-6">Rate: {pkg.rate}</p>
+              <p className="text-base text-stone-700 mb-6 leading-relaxed">
+                For pricing,{" "}
+                <a
+                  href="#contact"
+                  className="font-medium text-amber-700 underline underline-offset-2 decoration-amber-700/40 hover:text-amber-800 hover:decoration-amber-800"
+                >
+                  contact us
+                </a>{" "}
+                — we&apos;ll share a quote tailored to your project.
+              </p>
               <ul className="space-y-2">
                 {pkg.features.map((f, j) => (
                   <li key={j} className="flex items-start gap-2 text-stone-600 text-sm">
