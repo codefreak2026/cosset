@@ -6,6 +6,27 @@ import PhotoSwipeLightbox from "photoswipe/lightbox";
 import PhotoSwipe from "photoswipe";
 import "photoswipe/style.css";
 
+const shimmerCSS = `
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      #e5e7eb 0%,
+      #f3f4f6 50%,
+      #e5e7eb 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+  }
+`;
+
 const galleryImages = [
   { src: "https://res.cloudinary.com/dmgvtmsba/image/upload/v1775212841/cosset/gallery/1.png", alt: "Modern residence" },
   { src: "https://res.cloudinary.com/dmgvtmsba/image/upload/v1775212864/cosset/gallery/2.png", alt: "Living space" },
@@ -126,8 +147,11 @@ export default function Gallery() {
     };
   }, [itemData]);
 
+  const isLoading = itemData.length === 0;
+
   return (
     <section id="gallery" className="py-16 md:py-24 bg-stone-50">
+      <style>{shimmerCSS}</style>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <p className="section-tag mb-3">What We Do</p>
         <h2 className="section-title mb-4">Gallery</h2>
@@ -136,19 +160,31 @@ export default function Gallery() {
         </p>
 
         <div id="pswp-gallery" className="columns-2 md:columns-3 gap-3 md:gap-4 [column-fill:balance]">
-          {itemData.map((img, i) => (
-            <figure key={i} className="relative mb-3 overflow-hidden rounded-lg bg-stone-200 break-inside-avoid group m-0">
-              <a href={img.src} data-pswp-width={img.w} data-pswp-height={img.h}>
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  width={800}
-                  height={600}
-                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </a>
-            </figure>
-          ))}
+          {isLoading ? (
+            // Skeleton loaders
+            Array.from({ length: 24 }).map((_, i) => (
+              <figure
+                key={`skeleton-${i}`}
+                className="relative mb-3 overflow-hidden rounded-lg break-inside-avoid m-0 shimmer"
+                style={{ aspectRatio: "4/3", minHeight: "200px" }}
+              />
+            ))
+          ) : (
+            // Actual gallery images
+            itemData.map((img, i) => (
+              <figure key={i} className="relative mb-3 overflow-hidden rounded-lg bg-stone-200 break-inside-avoid group m-0">
+                <a href={img.src} data-pswp-width={img.w} data-pswp-height={img.h}>
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    width={800}
+                    height={600}
+                    className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </a>
+              </figure>
+            ))
+          )}
         </div>
       </div>
     </section>
