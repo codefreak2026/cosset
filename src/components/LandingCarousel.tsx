@@ -5,32 +5,32 @@ import { useState, useEffect } from "react";
 
 const slides = [
   {
-    image: "https://drive.google.com/uc?export=view&id=1xnI1lb0MGshKsGdi3pkfANEJHwEc9Kn_",
+    image: "https://drive.google.com/uc?export=view&id=19_He0OPiKcM8agVvIXcHeOsPMMh4Kw1Q",
     title: "Where Vision Meets Design",
     subtitle: "Architecture & Interior Design",
   },
   {
-    image: "https://drive.google.com/uc?export=view&id=1gk_ViNwLsEOuHCncZQ6Ma35w7hhJtSZe",
+    image: "https://drive.google.com/uc?export=view&id=13KXn3lLJHQdThUPLM9EgK3XNSN7UeWCO",
     title: "Spaces That Speak",
     subtitle: "Crafting functional marvels and aesthetic expressions",
   },
   {
-    image: "https://drive.google.com/uc?export=view&id=1MHOVxI14f7aqQVItr2mxuSXhFMae-P0v",
+    image: "https://drive.google.com/uc?export=view&id=1L2LSgFMKTfGAdanptAkvL9c0CFpZpcIj",
     title: "Timeless Beauty",
     subtitle: "Innovation rooted in tradition",
   },
   {
-    image: "https://drive.google.com/uc?export=view&id=1SGOXBXS1hqWJDWW_0E5QRAVHIBjejUCG",
+    image: "https://drive.google.com/uc?export=view&id=16K2WV3Cp6_S3Rkr45o2kOFWUEppCBwjM",
     title: "Your Dream Space",
     subtitle: "From concept to completion",
   },
   {
-    image: "https://drive.google.com/uc?export=view&id=11gI118ycplza5rpiU7f5Hzp0eyYV_vqV",
+    image: "https://drive.google.com/uc?export=view&id=1__CgK8Kb69roU5_xw97losvcrm733PTm",
     title: "Luxury Living",
     subtitle: "Experience the pinnacle of luxury living",
   },
   {
-    image: "https://drive.google.com/uc?export=view&id=1nAouMPN1ZqBNMdykkuSVkEF7k4epCKcC",
+    image: "https://drive.google.com/uc?export=view&id=15ijD4HETtktlNHUWsz7pC4U5UZan7ix0",
     title: "Commercial Complex",
     subtitle: "Commercial Complex Design",
   },
